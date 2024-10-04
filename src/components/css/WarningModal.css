@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #DAC1FF;
+    --text-color: #555;
+    --background-color: white;
+    --overlay-bg-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    width: 90%;
+    max-width: 78rem;
+    box-shadow: 0 4px 20px #0003;
+    text-align: center;
+    animation: scaleIn .3s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+.subheading {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.bullet-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.bullet-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: flex-start;
+    /* Align text to the left */
+    text-align: left;
+    /* Align text to the left */
+    gap: 10px;
+    /* Add gap between bullet and text */
+}
+
+.bullet-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-right: 10px;
+    /* Increased space between bullet and text */
+}
+
+.important {
+    font-size: 15px;
+    color: var(--text-color);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.modal-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.modal-button:hover {
+    background-color: #b293e6;
+}
+@media (max-width: 884px) {
+    .bullet-list strong {
+        font-size: 16px !important;
+        line-height: 21px !important;
+        letter-spacing: 0px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .bullet-list {
+        padding: 0rem 2rem 0rem 5rem;
+    }
+    .list-content-child {
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .list-content-xss {
+        text-align: center !important;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .subheading {
+        font-size: 16px;
+    }
+
+    .bullet-list li::before {
+        font-size: 16px;
+    }
+
+    .important {
+        font-size: 14px;
+    }
+
+    .modal-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 540px) {
+    .list-content-child {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0px;
+    }
+    .bullet-list strong {
+        font-size: 12px !important;
+        line-height: 18px !important;
+        letter-spacing: 0px !important;
+        text-align: left;
+    }
+    .bullet-list li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left !important;
+        gap: 8px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .subheading {
+        font-size: 14px;
+    }
+
+    .bullet-list li::before {
+        font-size: 14px;
+    }
+
+    .important {
+        font-size: 12px;
+    }
+
+    .modal-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 430px) {
+    .bullet-list li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left !important;
+        gap: 12px;
+    }
+    .list-content-xss {
+        text-align: center !important;
+        flex-direction: column;
+    }
+    .bullet-list li:before {
+        font-size: 14px;
+        display: none;
+    }
+    .subheading {
+        font-size: 14px;
+        font-weight: 800;
+    }
+}

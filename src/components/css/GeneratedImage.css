@@ -1,0 +1,92 @@
+.generated-image-main-container {
+    display: flex;
+    justify-content: center;
+    margin: 11px !important;
+}
+
+.generated-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45rem;
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+    /* box-shadow: 0 4px 8px #0000001a; */
+    background-color: #fff;
+}
+
+.generated-image-container h3 {
+    color: #DAC1FF;
+    margin: 0;
+}
+
+.generated-image-container img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+
+.generated-image-container .button-group {
+    margin-top: 20px;
+}
+
+.generated-image-container button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color .3s ease;
+}
+
+.generated-image-container button:hover {
+    background-color: #208d39;
+}
+
+.generated-image-container .cancel-button {
+    background-color: #f44336;
+}
+
+.generated-image-container .cancel-button:hover {
+    background-color: #d32f2f;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.image-conversion-loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid rgb(224, 194, 255);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+.generated_image {
+    max-height: 500px;
+    object-fit: cover;
+    object-position: top;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
